@@ -2,8 +2,6 @@ require 'colorize'
 require_relative 'browser'
 require_relative 'csv'
 
-test_hostname = 'https://rp1-www.racingpost.com'
-test_path = '/news/horse-racing/?'
 csv_path = 'test.csv'
 
 csv = ReviewRedirect::CSVParser.new(file_path: csv_path)
