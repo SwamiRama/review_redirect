@@ -13,8 +13,6 @@ module ReviewRedirect
     end
 
     def redirect_url
-            require 'pry'; binding.pry
-
       call_url[:Location]
     end
 
