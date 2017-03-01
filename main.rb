@@ -13,7 +13,12 @@ while csv.end?
   if (csv.redirect_url == browser.redirect_url && ( browser.status == 301 || browser.status == 302 ))
     puts 'ok'.green
   else
-    puts 'wrong '.red + 'original_url: ' + csv.original_url.to_s + ' != redirect_url: ' + browser.redirect_url.to_s + ' with status: ' + browser.status.to_s
+    puts '>>> WRONG <<<'.red
+    puts 'original_url: ' + csv.original_url.to_s 
+    puts 'redirect_url: ' + browser.redirect_url.to_s
+    puts 'status: ' + browser.status.to_s
+    puts 'csv_line: ' + csv.current_line_number.to_s
+    puts '>'.red * 7 + '<'.red * 7
   end
   csv.next
 end
