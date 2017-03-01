@@ -4,16 +4,17 @@ module ReviewRedirect
     attr_reader :redirect_url, :url, :hostname, :path, :call_url
 
     def initialize(args)
-      @hostname = args[:hostname].to_s
-      @path = args[:path].to_s
+      @url = args[:hostname].to_s + args[:path].to_s if args[:url].nil?
       @url = args[:url].to_s
     end
 
     def original_url
-      hostname + path
+      url
     end
 
     def redirect_url
+            require 'pry'; binding.pry
+
       call_url[:Location]
     end
 
@@ -22,7 +23,6 @@ module ReviewRedirect
     end
 
     def call_url
-      @call_url ||= HTTP.get(hostname + path) if url.nil?
       @call_url ||= HTTP.get(url)
     end
   end
