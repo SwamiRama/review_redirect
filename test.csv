@@ -1,0 +1,4 @@
+original_domain,original_path, redirect_domain, redirect_path
+https://rp1-www.racingpost.com,/news/horse-racing/?,https://rp1-www.racingpost.com,/news/
+https://rp1-www.racingpost.com,/news/live.sd,https://rp1-www.racingpost.com,/news/
+https://rp1-www.racingpost.com,/news/newspaper_archive.s,https://rp1-www.racingpost.com,/news/

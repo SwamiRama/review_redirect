@@ -4,6 +4,7 @@ GEM
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
     coderay (1.1.1)
+    colorize (0.8.1)
     domain_name (0.5.20170223)
       unf (>= 0.0.5, < 1.0.0)
     http (2.2.1)
@@ -30,6 +31,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  colorize
   http
   pry
 

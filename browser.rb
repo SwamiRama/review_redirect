@@ -1,12 +1,12 @@
 require 'http'
 module ReviewRedirect
   class Browser
-    attr_accessor :hostname, :path, :call_url
-    attr_reader :redirect_url
+    attr_reader :redirect_url, :url, :hostname, :path, :call_url
 
     def initialize(args)
       @hostname = args[:hostname].to_s
       @path = args[:path].to_s
+      @url = args[:url].to_s
     end
 
     def original_url
@@ -22,7 +22,8 @@ module ReviewRedirect
     end
 
     def call_url
-      @call_url ||= HTTP.get(hostname + path)
+      @call_url ||= HTTP.get(hostname + path) if url.nil?
+      @call_url ||= HTTP.get(url)
     end
   end
 end
