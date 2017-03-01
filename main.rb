@@ -16,7 +16,7 @@ while csv.end?
     puts 'redirect_url: ' + browser.redirect_url.to_s
     puts 'status: ' + browser.status.to_s
     puts 'csv_line: ' + csv.current_line_number.to_s
-    puts '>'.red * 7 + '<'.red * 7
+    puts '>'.red * 6 + '<'.red * 6
   end
   csv.next
 end
